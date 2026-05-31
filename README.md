@@ -46,8 +46,6 @@ adidas-apiroute/
 npm install
 ```
 
-El archivo `.env` debe existir y contener las variables `MONGO_URI` y `PORT`. No se debe publicar la URI real de MongoDB.
-
 ## Ejecucion
 
 ```bash
@@ -71,6 +69,22 @@ Salud del servidor:
 ```txt
 http://localhost:3000/health
 ```
+## Backend
+
+El backend del proyecto está desarrollado con **Node.js**, **Express** y **MongoDB**.  
+Su función principal es manejar la API REST del catálogo de productos Adidas, permitiendo crear, consultar, actualizar y eliminar registros desde la base de datos.
+
+### Estructura del backend
+
+El backend está organizado de forma modular:
+
+- `server.js`: archivo principal que inicia el servidor.
+- `app.js`: configura Express, middlewares, rutas y el frontend estático.
+- `config/database.js`: realiza la conexión con MongoDB usando la variable `MONGO_URI` del archivo `.env`.
+- `models/adidas.model.js`: contiene el modelo de datos de los productos Adidas.
+- `controllers/adidas.controllers.js`: contiene la lógica del CRUD.
+- `routes/adidas.routes.js`: contiene las rutas específicas de productos Adidas.
+- `routes/index.routes.js`: conecta las rutas principales de la API.
 
 ## Rutas de la API
 
@@ -117,13 +131,11 @@ Funciones disponibles desde la interfaz:
 
 ## Datos de prueba principales
 
-El proyecto se entrega con 2 registros principales solicitados por la rubrica:
+El proyecto se entrega con 1 registro principales solicitados por la rubrica:
 
 1. Adidas Ultraboost Light
-2. Adidas Predator Accuracy
 
 Tambien se prueba un registro temporal llamado `Producto Temporal Adidas`, creado solo para verificar DELETE y eliminado despues de la prueba.
 
-## Autor o nota academica
-
-Proyecto preparado para evaluacion academica de CRUD con Node.js, Express, MongoDB y frontend publico en Bootstrap.
+## Autor 
+Hellen Gonzales
