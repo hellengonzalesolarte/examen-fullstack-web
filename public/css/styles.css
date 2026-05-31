@@ -1,0 +1,132 @@
+:root {
+  --surface: #ffffff;
+  --ink: #171717;
+  --muted: #667085;
+  --line: #e6e8ec;
+  --accent: #128a54;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(18, 138, 84, 0.08), rgba(255, 255, 255, 0) 260px),
+    #f5f7fa;
+}
+
+.hero-section {
+  background:
+    linear-gradient(115deg, rgba(0, 0, 0, 0.92), rgba(20, 35, 30, 0.86)),
+    url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.hero-kicker {
+  color: #79e3ad;
+  letter-spacing: 0.08rem;
+}
+
+.summary-panel {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.summary-label,
+.summary-note {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.summary-panel strong {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.form-card {
+  position: sticky;
+  top: 1rem;
+}
+
+.product-card {
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #e9ecef;
+}
+
+.product-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  color: var(--muted);
+  background: linear-gradient(135deg, #e8edf1, #f8f9fb);
+}
+
+.product-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.product-meta span {
+  padding: 0.45rem 0.55rem;
+  border-radius: 6px;
+  background: #f4f6f8;
+}
+
+.product-meta strong {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.descripcion-producto {
+  color: #4d5761;
+  font-size: 0.95rem;
+}
+
+.empty-state {
+  padding: 2rem;
+  border: 1px dashed #b6c1cc;
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--surface);
+  text-align: center;
+}
+
+.btn {
+  border-radius: 6px;
+}
+
+@media (max-width: 991.98px) {
+  .form-card {
+    position: static;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .display-5 {
+    font-size: 2rem;
+  }
+
+  .product-meta {
+    grid-template-columns: 1fr;
+  }
+}
